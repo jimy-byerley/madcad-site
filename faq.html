@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>MADCAD software</title>
+	<link rel="shortcut icon" href="logo.ico">
+	<link rel="stylesheet" href="style.css">
+	
+	<script>
+		async function include(id, url) {
+			container = document.getElementById(id)
+			content = await (await fetch(url)).text()
+			container.innerHTML = content
+		}
+	</script>
+</head>
+	
+<div class="body">
+	<div id="top"><script> include("top", "top.html") </script></div>
+	
+	<ul>
+		<li>
+			<p class="question">Why was madcad created for ?</p>
+			<div class="answer">
+				<p>
+					The main target of this software is mechanical design.
+					You can use it to model your parts for 3D printing, or before manufacturing them in the way you want. You can use it to generate parts for finite element meshes, or to visualize big assemblies ...
+				</p>
+				<p>Mainly for two reasons:</p>
+				<ul>
+					<li>the extremely high cost of professional CAD softwares</li>
+					<li>There was so many operations too difficult or just impossible to make on those softwares, despite their apparent conceptual simplicity</li>
+				</ul>
+				<p>
+					The first reason prevents many people from 3d modeling. Those people might not be working in a company big enough, or not at a mechanical design office, or just not in a company at all; but could still take a great advantage of having a powerful and intuitive CAD modeling tool at their disposal.
+				</p>
+				<p>
+					The second reason is what made me think to something else than FreeCAD. I wanted something more flexible, extensible and modular.
+				</p>
+			</div>
+		</li>
+		<li>
+			<p class="question">Is uimadcad open-source ?</p>
+			<div class="answer">
+				<p>The short answer is: no</p>
+				<p>
+					The goal with uimadcad is to help in using pymadcad, and a commercial offer might be useful in order to support the development. uimadcad will stay free for personal and educational use, but must stay closed source at least for now.
+				</p>
+			</div>
+		</li>
+		<li>
+			<p class="question">Is there plans for paid licenses ?</p>
+			<div class="answer">
+				<p>not yet.</p>
+				<p>
+					If you would like one, please contact the creator: <a href="mailto:jimy.byerley@gmail.com">Yves Dejonghe &lt;jimy.byerley@gmail.com&gt;</a> 
+				</p>
+			</div>
+		</li>
+		<li>
+			<p class="question">Can I support the development ?</p>
+			<div class="answer">
+				<p>
+					The best help for now is to contribute to pymadcad. It is where all the modeling functions are developped, so it's where the important work takes place. Also it's open-source so you will contribute to the world's knowledge by developping pymadcad.
+				</p>
+			</p>
+		</li>
+	</ul>
+	
+</div>
+
+</html>

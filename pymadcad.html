@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>MADCAD software - pymadcad</title>
+	<link rel="shortcut icon" href="logo.ico">
+	<link rel="stylesheet" href="style.css">
+	
+	<script>
+		async function include(id, url) {
+			container = document.getElementById(id)
+			content = await (await fetch(url)).text()
+			container.innerHTML = content
+		}
+	</script>
+</head>
+	
+<div class="body">
+
+
+	<div id="top"><script> include("top", "top.html") </script></div>
+	
+	
+	<div class="article">
+		<p class="definition">
+			<b>pymadcad</b> is the python module (a code library) allowing to perform CAD modeling in pure python. 
+			<br>
+			It is meant to be easy, extensible, flexible and intuitive.
+		</p>
+		
+		<p>
+			<b>pymadcad</b> contains all the functions and data definitions of <b>uimadcad</b>. All the code you write in the script view of the GUI is only a regular python script using <b>pymadcad</b>. And the file that the GUI is producing is just this python script in a text file, named a python file. 
+			<br>
+			This means you don't need <b>uimadcad</b> to run it, you cloud just run your file with python.
+		</p>
+		
+		<p class="comment">The module uses Qt and OpenGL to display its graphics, and all the usual python scientific libraries for computations<p>
+		<p>
+			<p>pymadcad</b> is still under development so all features might not work perfectly. 
+			If so, please report an issue.<a class="readmore" href="https://github.com/jimy-byerley/pymadcad/issues">issues</a>
+		<p>
+	</div>
+	
+		
+	<div class="article">
+		<div class="feature-box">
+			<p class="feature-title">Features of <b>pymadcad</b></p>
+			<ul>
+				<li>very intuitive 3d geometry <span class="comment">through vectors and matrices</span></li>
+				<li>regular generation functions <span class="comment">(extrusion, revolution, tube, saddle, triangulation, ...)</span></li>
+				<li>boolean operations <span class="comment">on surfaces and webs</span></li>
+				<li>chamber and bevel operations <span class="comment">on surfaces and webs</span></li>
+				<li>rendering high quality graphics <span class="comment">featuring the display protocol</span></li>
+				<li>geometric constraint solver</li>
+				<li>kinematic manipulation</li>
+				<li>very standard mesh format <span class="comment">: buffered points and triangles</span></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<frame>
+	<div class="image-chain">
+		<img src="screenshots/show-bearing.png">
+		<img src="screenshots/show-kinematic.png">
+		<img src="screenshots/show-annotations.png">
+		<img src="screenshots/show-generation.png">
+		<img src="screenshots/show-measuring.png">
+<!-- 		<img src="screenshots/show-splines.png"> -->
+		
+		<img src="screenshots/code-bevelgear.png">
+		<img src="screenshots/code-kinematic.png">
+	</div>
+	</frame>
+	
+	<div class="article">
+		<h2>Project links</h2>
+		<ul>
+			<li>
+				<a href="https://github.com/jimy-byerley/pymadcad"> repository on github </a> 
+				&mdash; to review the source code
+			</li>
+			<li>
+				<a href="https://pymadcad.readthedocs.io/en/latest/"> documentation </a> 
+				&mdash; describing every detail of the programming interface
+			</li>
+			<li>
+				<a href="https://github.com/jimy-byerley/pymadcad/discussions"> discussion forum </a> 
+				&mdash; for help with the API or regarding the development
+			</li>
+			<li>
+				<a href="https://github.com/jimy-byerley/pymadcad/issues"> issue tracker </a> 
+				&mdash; if you found a bug or want to ask for a feature
+			</li>
+		</ul>
+	</div>
+		
+		
+	<div class="article">
+		<h2>How to install</h2>
+		<p>To install pymadcad on your computer, please refer to <a href="https://pymadcad.readthedocs.io/en/latest/installation.html">the guide</a></p>
+	</div>
+	
+	
+</div>
+
+</html>

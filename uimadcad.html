@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>MADCAD software - uimadcad</title>
+	<link rel="shortcut icon" href="logo.ico">
+	<link rel="stylesheet" href="style.css">
+	
+	<script>
+		async function include(id, url) {
+			container = document.getElementById(id)
+			content = await (await fetch(url)).text()
+			container.innerHTML = content
+		}
+	</script>
+	
+	<script>
+		// slideshow functions
+		// using the model of https://www.w3schools.com/howto/howto_js_slideshow.asp
+		
+		// Thumbnail image controls
+		function currentCascade(n) {
+			showCascade(n);
+		}
+
+		function showCascade(n) {
+			var i
+			var slides = document.getElementsByClassName("cascade")
+			if (n > slides.length) {n = 1}
+			if (n < 1) {n = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.zIndex = 0
+			slides[n-1].style.zIndex = 1
+			}
+		} 
+	</script>
+</head>
+	
+<div class="body">
+
+
+	<div id="top"><script> include("top", "top.html") </script></div>
+	
+	
+	<div class="article">
+		<p class="definition"><b>uimadcad</b> is a GUI (Graphical User Interface) meant to ease the use of <b>pymadcad</b></p>
+		<p>
+			While <b>pymadcad</b> is a powerful and intuitive python module, any code generating a 3d model your still work just with a script full of coordinates and computational instructions, that one needs to reexecute and wait for its result to show - each time you change a value.
+			
+			<b>uimadcad</b> allows you to view every variable, every expression in your code just by clicking on it, and interact with the display to edit it.
+			
+			<br>
+			
+			With <b>uimadcad</b>, you still work on the script, but you can combine the best of both world (text &amp; graphic) together to model faster.
+		</p>
+		<p class="comment">developped with Qt and Python<p>
+		<p><p>uimadcad</b> is still under development so all features might not work perfectly, and there is still bugs.<p>
+	</div>
+	
+	<div class="article">
+		<div class="feature-box">
+			<p class="feature-title">Features of <b>uimadcad</b></p>
+			<ul>
+				<li>3d geometry interactive edition</li>
+				<li>partial execution of code (only the modified code is re-executed)</li>
+				<li>quick tools to easily generate 3d primitive objects</li>
+				<li>multi-view 3d scene</li>
+				<li>multi-view script editor</li>
+				<li>fast scene composition for each view</li>
+				<li>themable GUI</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="image-cascade">
+		<img class="cascade" src="screenshots/interface-green.png" onclick="currentCascade(1)">
+		<img class="cascade" src="screenshots/interface-red.png" onclick="currentCascade(2)">
+		<img class="cascade" src="screenshots/interface-white.png" onclick="currentCascade(3)">
+	</div>
+	
+	
+	<div class="article">
+		<h2>How to install</h2>
+		
+		<div class="feature-box">
+		
+		<table class="package-table">
+			<thead>
+			<tr>
+				<th>distribution</th>
+				<th>package for x86_64</th>
+				<th>package for x86</th>
+			</tr>
+			</thread>
+			<tbody>
+				<tr>
+					<td><img class="os-icons" src="icons/logo-debian.webp"> Debian based</td>
+					<td><a href="dist/uimadcad-0.6_amd64.deb">uimadcad-0.6_amd64.deb</a></td>
+					<td><a href="dist/uimadcad-0.6_i686.deb">uimadcad-0.6_i686.deb</a></td>
+				</tr>
+				<tr>
+					<td><img class="os-icons" src="icons/logo-redhat.png"> Redhat based</td>
+					<td><a href="dist/uimadcad-0.6_x86_64.rpm">uimadcad-0.6_x86_64.rpm</a></td>
+					<td><a href="dist/uimadcad-0.6_x86.rpm">uimadcad-0.6_x86.rpm</a></td>
+				</tr>
+				<tr>
+					<td><img class="os-icons" src="icons/logo-linux.png"> All linux</td>
+					<td><a href="dist/uimadcad-0.6_x86_64.tar.gz">uimadcad-0.6_x86_64.tar.gz</a></td>
+					<td><a href="dist/uimadcad-0.6_x86.tar.gz">uimadcad-0.6_x86.tar.gz</a></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div>
+			<p class="feature-title">Linux</p>
+		
+			<p>The installation package will only install the GUI, you will need to install pymadcad separately</p>
+			<pre>
+<code>$ sudo dpkg -i uimadcad-0.6_x86_64.deb
+$ sudo apt -f install
+$ pip3 install pymadcad[stl,ply]</code>
+			</pre>
+		</div>
+		
+		</div>
+		
+		<div class="feature-box">
+		
+		<table class="package-table">
+			<thead>
+			<tr>
+				<th>distribution</th>
+				<th>package for x86_64</th>
+				<th>package for x86</th>
+			</tr>
+			</thread>
+			<tbody>
+				<tr>
+					<td><img class="os-icons" src="icons/logo-windows.png"> Windows 7 - 11</td>
+					<td><a href="dist/uimadcad-0.6_x86_64.zip">uimadcad-0.6_x86_64.zip</a></td>
+					<td><a href="dist/uimadcad-0.6_x86.zip">uimadcad-0.6_x86.zip</a></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div>
+			<p class="feature-title">Windows</p>
+			<p>We shipped a portable package. Just download the package and extract it wherever you want.</p>
+		</div>
+		
+		</div>
+		
+	</div>
+	
+	
+</div>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>MADCAD software</title>
+	<link rel="shortcut icon" href="logo.ico">
+	<link rel="stylesheet" href="style.css">
+	
+	<script>
+		async function include(id, url) {
+			container = document.getElementById(id)
+			content = await (await fetch(url)).text()
+			container.innerHTML = content
+		}
+	</script>
+	
+	<link rel="stylesheet" href="slideshow.css">
+	<script>
+		// slideshow functions
+		// using the model of https://www.w3schools.com/howto/howto_js_slideshow.asp
+		
+		var slideIndex = 1;
+
+		// Next/previous controls
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {slideIndex = 1}
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";
+			dots[slideIndex-1].className += " active";
+		} 
+	</script>
+	
+	<script>
+		// automatic slideshow
+		/*
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}
+			slides[slideIndex-1].style.display = "block";
+			setTimeout(showSlides, 2000); // Change image every 2 seconds
+		}
+		*/
+	</script>
+</head>
+	
+<div class="body">
+	<div id="top"><script> include("top", "top.html") </script></div>
+	
+
+	<div class="article">
+		<p class="slogan">pythonic, extensible, interactive - 3D CAD software</p>
+		<p>
+			<b>MADCAD</b> is a software and a programming library that allows you to make CAD modeling using finite triangular meshes, with simple and intuitive python scripts. As of any python script, it empowers you with every existing python modules in the world, to compute, dimension or exploit your CAD results.
+		</p>
+		<p>
+			It behaves too differently than any other CAD system you may have used to make a list here. Checkout an <a class="readmore" href="https://pymadcad.readthedocs.io/en/latest/concepts.html#comparison-with-existing-cad-softwares">extensive comparison here</a>
+		</p>
+		<br>
+		<p>The madcad project is splitted:</p>
+		<ul>
+			<li><a href="pymadcad.html">pymadcad</a>  &mdash;  The core code <span class="comment">, free and <a href="https://fr.wikipedia.org/wiki/Open_source">*open-source*</a> as every library should</li>
+			<li><a href="uimadcad.html">uimadcad</a>  &mdash;  The user interface <span class="comment">, free to use (at least for now) but not open-source (at least for now)</p></li>
+		</ul>
+	</div>
+	
+<!-- 	<p class="slogan">Gallery</p> -->
+	
+	<!-- usecase slideshow -->
+	<div class="article">
+		<div class="slideshow-container">
+			<!-- the slideshow content -->
+			<div class="mySlides fade"><img style="width:100%" src="screenshots/interface-multiview.png"></div>
+			<div class="mySlides fade"><img style="width:100%" src="screenshots/interface-green.png"></div>
+			
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	
+		<script> 
+			showSlides(slideIndex);
+		</script>
+	</div>
+				
+</div>
+
+</html>
