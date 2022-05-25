@@ -84,6 +84,8 @@
 	<div class="article">
 		<h2>How to install</h2>
 		
+		<p>You can keep of track the different versions on the <a href="changelog.html">full changelog</a> </p>
+		
 		<div class="feature-box">
 		
 		<table class="package-table">
@@ -97,18 +99,18 @@
 			<tbody>
 				<tr>
 					<td><img class="os-icons" src="icons/logo-debian.webp"> Debian based</td>
-					<td><a href="dist/uimadcad-0.6_amd64.deb">uimadcad-0.6_amd64.deb</a></td>
-					<td><a href="dist/uimadcad-0.6_i686.deb">uimadcad-0.6_i686.deb</a></td>
+					<td><a href="dist/uimadcad_0.6_amd64.deb">uimadcad_0.6_amd64.deb</a></td>
+					<td><a href="dist/uimadcad_0.6_i686.deb">uimadcad_0.6_i686.deb</a></td>
 				</tr>
 				<tr>
 					<td><img class="os-icons" src="icons/logo-redhat.png"> Redhat based</td>
-					<td><a href="dist/uimadcad-0.6_x86_64.rpm">uimadcad-0.6_x86_64.rpm</a></td>
-					<td><a href="dist/uimadcad-0.6_x86.rpm">uimadcad-0.6_x86.rpm</a></td>
+					<td><a href="dist/uimadcad_0.6_x86_64.rpm">uimadcad_0.6_x86_64.rpm</a></td>
+					<td><a href="dist/uimadcad_0.6_x86.rpm">uimadcad_0.6_x86.rpm</a></td>
 				</tr>
 				<tr>
 					<td><img class="os-icons" src="icons/logo-linux.png"> All linux</td>
-					<td><a href="dist/uimadcad-0.6_x86_64.tar.gz">uimadcad-0.6_x86_64.tar.gz</a></td>
-					<td><a href="dist/uimadcad-0.6_x86.tar.gz">uimadcad-0.6_x86.tar.gz</a></td>
+					<td><a href="dist/uimadcad_0.6_x86_64.tar.gz">uimadcad_0.6_x86_64.tar.gz</a></td>
+					<td><a href="dist/uimadcad_0.6_x86.tar.gz">uimadcad_0.6_x86.tar.gz</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -118,7 +120,7 @@
 		
 			<p>The installation package will only install the GUI, you will need to install pymadcad separately</p>
 			<pre>
-<code>$ sudo dpkg -i uimadcad-0.6_x86_64.deb
+<code>$ sudo dpkg -i uimadcad_0.6_x86_64.deb
 $ sudo apt -f install
 $ pip3 install pymadcad[stl,ply]</code>
 			</pre>
@@ -139,15 +141,20 @@ $ pip3 install pymadcad[stl,ply]</code>
 			<tbody>
 				<tr>
 					<td><img class="os-icons" src="icons/logo-windows.png"> Windows 7 - 11</td>
-					<td><a href="dist/uimadcad-0.6_x86_64.zip">uimadcad-0.6_x86_64.zip</a></td>
-					<td><a href="dist/uimadcad-0.6_x86.zip">uimadcad-0.6_x86.zip</a></td>
+					<td><a href="dist/uimadcad_0.6_x86_64.zip">uimadcad_0.6_x86_64.zip</a></td>
+					<td><a href="dist/uimadcad_0.6_x86.zip">uimadcad_0.6_x86.zip</a></td>
 				</tr>
 			</tbody>
 		</table>
 		
 		<div>
 			<p class="feature-title">Windows</p>
-			<p>We shipped a portable package. Just download the package and extract it wherever you want.</p>
+<!-- 			<p>We shipped a portable package. Just download the package and extract it wherever you want.</p> -->
+			<ui>
+				<li>Install <a href="https://python.org">python</a> end don't forget the option to add it on the <code>PATH</code></li>
+				<li>run in command prompt <pre><code>> pip install pymadcad[stl,ply]</code></pre></li>
+				<li>extract the zip file where you want</li>
+			</ui>
 		</div>
 		
 		</div>
