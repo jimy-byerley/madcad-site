@@ -38,14 +38,14 @@ body {
 	padding-left: 2rem;
 	padding-right: 2rem;
 	
-	border-top: 3px solid #205068;
+	border-top: 3px solid #205038;
 	
 	font-size: 16px;
 	list-style: none;
 }
 .top-menu > li:hover, .top-menu li:active {
-	background-color: #1b242d;
-	border-top-color: #407ea4;
+	background-color: #1b2d22;
+	border-top-color: #40a468;
 }
 .top-menu > li > a {
 	text-decoration: none;
@@ -56,13 +56,13 @@ body {
 }
 
 a {
-	color: #2980B9;
+	color: #29b960;
 }
 a:visited {
-    color: #479da2;
+    color: #47a270;
 }
 a:hover, a:active {
-	color: #479da2;
+	color: #47a270;
 }
 
 
@@ -102,7 +102,7 @@ h3 {
 	font-size: 18px;
 	font-weight: bold;
 	
-	color: #8198a2;
+	color: #81a28e;
 }
 .package-table {
 	min-width: 40em;
@@ -245,7 +245,7 @@ th {
 	font-size: 20px;
 	font-style: italic;
 	
-	color: #8198a2;
+	color: #81a28e;
 }
 
 .readmore::before {
